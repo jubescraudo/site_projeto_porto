@@ -1,3 +1,7 @@
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
 // fade sections
 const sections=document.querySelectorAll('section')
 const obs=new IntersectionObserver(e=>{
@@ -22,9 +26,40 @@ window.addEventListener('scroll',()=>{
  })
 })
 
-// dark mode toggle
-function toggleTheme(){
- document.body.classList.toggle('dark')
+//botao fotos
+let imagens = [
+  "img/botoeira1.jpeg",
+  "img/botoeira2.jpeg",
+  "img/botoeira3.jpeg",
+  "img/botoeira4.jpeg",
+  "img/principal1.jpeg",
+  "img/principal2.jpeg",
+  "img/principal3.jpeg",
+  "img/principal4.jpeg"
+];
+
+let indexAtual = 0;
+
+function abrirGaleria() {
+  document.getElementById("galeria").style.display = "flex";
+  mostrarImagem();
+}
+
+function fecharGaleria() {
+  document.getElementById("galeria").style.display = "none";
+}
+
+function mostrarImagem() {
+  document.getElementById("imgGrande").src = imagens[indexAtual];
+}
+
+function trocarImagem(direcao) {
+  indexAtual += direcao;
+
+  if (indexAtual < 0) indexAtual = imagens.length - 1;
+  if (indexAtual >= imagens.length) indexAtual = 0;
+
+  mostrarImagem();
 }
 
 // menu mobile 

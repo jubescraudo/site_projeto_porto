@@ -23,7 +23,7 @@
     <a href="#documentos">Documentos</a>
     <a href="#projeto3d">Projeto 3D</a>
    </nav>
-   <div class="toggle" onclick="toggleTheme()">🌙</div>
+   <div class="toggle" onclick="toggleTheme()">Theme 🌙</div>
  </div>
   <div class="menu-btn" onclick="toggleMenu()">
   <span></span>
@@ -34,7 +34,7 @@
 <section id="inicio" class="hero">
  <h1>Projeto Melhoria Contínua</h1>
  <p>Bem-vindo ao nosso site. Este espaço foi desenvolvido para apresentar, de forma clara e profissional, o projeto Melhoria Contínua, reunindo informações, documentos técnicos, imagens e visualizações que demonstram todo o processo de desenvolvimento. Explore cada seção e conheça os detalhes, desafios e soluções aplicadas ao longo deste trabalho.</p>
- <img src="img/portoexemploinicio.png">
+ <img src="img/principal2.jpeg">
 </section>
 
 <section id="sobre">
@@ -84,14 +84,19 @@ dos aprendizes.</p>
 </section>
 
 <section id="fotos">
- <h2>Fotos</h2>
- <p>Aqui estão algumas fotos do processo de desenvolvimento do projeto, mostrando as etapas, os desafios enfrentados e as soluções implementadas.</p>
-	<div class="grid-fotos">
-  <img src="img/fundofotos.png" alt="exemplo">
-  <img src="img/fundofotos.png">
-  <img src="img/fundofotos.png">
-  <img src="img/fundofotos.png">
+  <button class="btn-ver" onclick="abrirGaleria()">
+  📸 Ver Fotos
+</button>
+
+  <div id="galeria" class="galeria">
+  <span class="fechar" onclick="fecharGaleria()">✖</span>
+
+  <span class="prev" onclick="trocarImagem(-1)">❮</span>
+  <img id="imgGrande">
+  <span class="next" onclick="trocarImagem(1)">❯</span>
 </div>
+  
+  </div>
 </section>
 
 <section id="documentos">
