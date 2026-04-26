@@ -330,18 +330,20 @@ body.dark #projeto3d::before{
 /* ================== GRID PADRÃO ================== */
 .grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(2,1fr);
   gap:20px;
   margin-top:40px;
   width:100%;
   max-width:1000px;
 }
 
+
 .card{
   padding:25px;
   border-radius:20px;
   background:var(--card);
   transition:0.4s;
+  margin-bottom: 10px;
 }
 
 .card:hover{
@@ -376,6 +378,7 @@ body.dark #projeto3d::before{
   background: url('img/fundosobre.png') center/cover no-repeat;
   background-attachment:fixed;
   padding: 80px 20px;
+  text-align: center;
 }
 
 .btn-download {
@@ -401,7 +404,7 @@ body.dark #projeto3d::before{
 }
 
 .card::before {
-  content: "📄";
+  content: "📑";
   font-size: 40px;
   display: block;
   margin-bottom: 10px;

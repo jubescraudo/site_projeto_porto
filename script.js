@@ -1,8 +1,20 @@
 function toggleTheme() {
-  document.body.classList.toggle("dark");
+  const body = document.body;
+  body.classList.toggle("dark");
+
+  // salva no navegador
+  if (body.classList.contains("dark")) {
+    localStorage.setItem("tema", "dark");
+  } else {
+    localStorage.setItem("tema", "light");
+  }
+
+  // muda ícone
+  const btn = document.querySelector(".toggle");
+  btn.textContent = body.classList.contains("dark") ? "Theme ☀️" : "Theme 🌙";
 }
 
-// fade sections
+// fade 
 const sections=document.querySelectorAll('section')
 const obs=new IntersectionObserver(e=>{
  e.forEach(entry=>{
